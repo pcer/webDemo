@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程</title>
+    <script>
+        var xmlhttp=new XMLHttpRequest();
+        xmlhttp.open("GET","FirstServlet",true)
+        xmlhttp.send();
+    </script>
+</head>
+<body>
+<form action="FirstServlet3" method="GET">
+    姓名：<input type="text" name="name">
+    <br/>
+    网址：<input type="text" name="url"/>
+    <br/>
+    城市<select name="city">
+    <option value="芜湖">芜湖</option>
+    <option value="上海">上海</option>
+</select>
+    性别 男：<input type="radio" name="sex" value="男">
+    女：<input type="radio" name="sex" value="女">
+    <br/>
+    <input type="checkbox" name="web" checked="checked"/> 菜鸟教程
+    <input type="checkbox" name="web"/> Google
+    <input type="checkbox" name="web" checked="checked"/> 淘宝
+    <br/>
+    <input type="submit" value="提交"/>
+
+</form>
+</body>
+</html>
