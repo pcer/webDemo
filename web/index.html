@@ -6,8 +6,10 @@
     <script>
         // ajax提交方式
         var xmlhttp=new XMLHttpRequest();
-        xmlhttp.open("GET","FirstServlet",true)
+        xmlhttp.open("GET","FirstServlet",true);
         xmlhttp.send();
+        var result=xmlhttp.responseXML;
+        debugger
     </script>
 </head>
 <body>
