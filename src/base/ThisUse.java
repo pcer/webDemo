@@ -15,10 +15,12 @@ class Person {
     }
 
     public Person(String name, Integer age) {
+        //this语句的使用，执行上面的构造函数
         this(name);
         this.age = age;
     }
-    public void say(){
-        System.out.println(this.name+"---"+this.age);
+
+    public void say() {
+        System.out.println(this.name + "---" + this.age);
     }
 }

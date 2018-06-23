@@ -1,0 +1,33 @@
+在运行状态中，
+对于任意一个类，都能获取到这个类的所有的属性和方法，
+对于任意一个对象，都能够调用它的任意的一个方法和属性（包括私有的方法和属性）
+这种动态的获取信息和动态调用对象的方法称为java的反射机制。
+
+要想使用反射机制，就必须获得该类的字节码文件对象(.class),通过字节码文件对象，就能够通过该类中的方法获取
+到我们想要的信息(方法，属性，类名，实现的所有的接口)，每一个类对应着一个字节码文件也就对应着一个Class类型的
+对象，也就是字节码文件对象。
+
+获取字节码文件对象的三种方式
+1.Class clazz1=Class.forName("全类名"); //通过Class类中的静态方法forName，直接获取到一个类的字节码文件对象，此时该类还是源文件阶段，并没有变为字节码文件。
+2、Class clazz2  = Person.class;　　　　//当类被加载成.class文件时，此时Person类变成了.class，在获取该字节码文件对象，也就是获取自己， 该类处于字节码阶段。
+3、Class clazz3 = p.getClass();　　　　//通过类的实例获取该类的字节码文件对象，该类处于创建对象阶段　
+
+Field:字段对象  Constructor:构造器对象
+
+clazz.newInstance(); //无参构造器实例化
+Constructor constructor=clazz.getConstructor(int.class,String.class); //获取某个构造方法对象
+constructor.newInstance(12,"小明"); //通过构造方法对象进行创建对象
+
+注：Class类的newInstance()方法是使用该类无参的构造函数创建对象, 如果一个类没有无参的构造函数, 就不能这样创建了,
+可以调用Class类的getConstructor(String.class,int.class)方法获取一个指定的构造函数然后再调用Constructor类的newInstance(12,"小明")
+方法创建对象。
+
+clazz.getConstructors();//获取所有的构造方法
+constructor.getParameterTypes();//获取构造方法的参数类型数组
+
+Field field=clazz.getDeclaredField("id");//获取某个私有的属性对象
+field.setAccessible(true);//让其打开可见权限
+field.setInt(user,5);//给user对象的这个id字段赋值5
+
+
+clazz.getDeclaredFields();//将私有属性一并获得
