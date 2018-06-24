@@ -30,4 +30,20 @@ field.setAccessible(true);//让其打开可见权限
 field.setInt(user,5);//给user对象的这个id字段赋值5
 
 
-clazz.getDeclaredFields();//将私有属性一并获得
+Field[] field=clazz.getDeclaredFields();//将私有属性一并获得
+
+Method method=clazz.getMethod("eat"); //获取不带参数的eat方法
+Method method2=clazz.getMethod("eat",String.class);//获取带参数的eat方法。
+
+method.invoke();//执行方法。（静态方法）,如果要执行对象的方法，invoke第一个参数传入对象。
+
+Method [] methods=clazz.getDeclaredMethods(); //获取所有的方法
+
+clazz.getInterfaces();//获取实现的接口字节码对象
+
+应用场景：
+    1.jdk的动态代理
+    2.利用反射，在泛型为int的arrayList集合中可以存放一个String类型的对象。 泛型只在编译时有效，在运行期无效。
+
+
+
