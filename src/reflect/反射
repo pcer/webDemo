@@ -12,6 +12,8 @@
 2、Class clazz2  = Person.class;　　　　//当类被加载成.class文件时，此时Person类变成了.class，在获取该字节码文件对象，也就是获取自己， 该类处于字节码阶段。
 3、Class clazz3 = p.getClass();　　　　//通过类的实例获取该类的字节码文件对象，该类处于创建对象阶段　
 
+一般使用第一种方式获取字节码对象，第三种，对象已经有了还要什么反射，第二种要导包依赖强。
+
 Field:字段对象  Constructor:构造器对象
 
 clazz.newInstance(); //无参构造器实例化
