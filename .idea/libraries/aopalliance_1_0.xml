@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="aopalliance-1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-aop-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-aspects-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-beans-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-context-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-context-support-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-core-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-expression-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-instrument-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-instrument-tomcat-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-jdbc-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-jms-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-messaging-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-orm-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-oxm-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-test-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring4.38/spring-tx-4.3.8.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

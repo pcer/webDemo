@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--people类中注入了hello类，list,map,Set,基本类型-->
+    <bean id="hello" class="spring.Hello">
+        <property name="name" value="Spring Hello"></property>
+    </bean>
+    <bean id="people" class="spring.People">
+        <!--配置普通属性-->
+        <property name="type" value="小学"></property>
+        <property name="age" value="18"></property>
+        <!-- 配置容器中的其他类-->
+        <property name="hello">   <!--hello类注入到people中-->
+            <ref bean="hello"></ref>
+        </property>
+        <property name="greedList">
+            <list>
+                <value>一年级</value>
+                <value>二年级</value>
+                <value>三年级</value>
+            </list>
+        </property>
+        <property name="gradeMap">
+            <map>
+                <entry>
+                    <key>
+                        <value>A</value>
+                    </key>
+                    <value>优秀</value>
+                </entry>
+                <entry>
+                    <key>
+                        <value>B</value>
+                    </key>
+                    <value>良好</value>
+                </entry>
+                <entry>
+                    <key>
+                        <value>C</value>
+                    </key>
+                    <value>及格</value>
+                </entry>
+            </map>
+        </property>
+        <property name="favoriteSet">
+            <set>
+                <value>看报</value>
+                <value>赛车</value>
+                <value>高尔夫</value>
+            </set>
+        </property>
+    </bean>
+    <!--<aop:config>-->
+        <!--<aop:aspect id="MyMap" ref="check">-->
+
+        <!--</aop:aspect>-->
+    <!--</aop:co>-->
+    <!--自动扫描spring下面的含Annotation的bean-->
+    <context:component-scan base-package="spring"/>
+
+    <!-- 该 BeanPostProcessor 将自动对标注 @Autowired 的 Bean 进行注入 -->
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+</beans>
