@@ -7,6 +7,14 @@
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
+
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>contextConfigLocationValue</param-value>
+    </context-param>
+
+    <!--访问的servlet-->
     <servlet>
         <servlet-name>FirstServlet</servlet-name>
         <servlet-class>FirstServlet</servlet-class>
@@ -25,6 +33,7 @@
         <url-pattern>/SecondServlet</url-pattern>
     </servlet-mapping>
 
+    <!--定义过滤器-->
     <filter>
         <filter-name>MyFilter</filter-name>
         <filter-class>MyFilter</filter-class>
@@ -33,10 +42,12 @@
             <param-value>我是参数</param-value>
         </init-param>
     </filter>
+
     <filter-mapping>  <!--过义过滤器，然后映射到一个 URL 或 Servlet  web.xml 中的 filter-mapping 元素的顺序决定了 Web 容器应用过滤器到 Servlet 的顺序-->
         <filter-name>MyFilter</filter-name>
         <!--<url-pattern>/*</url-pattern>-->
         <servlet-name>FirstServlet</servlet-name>
+        <servlet-name>SecondServlet</servlet-name>
     </filter-mapping>
 
     <error-page>

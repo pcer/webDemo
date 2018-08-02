@@ -1,5 +1,8 @@
 package base;
 
+/**
+ * 构造器调用构造器
+ */
 public class ThisUse {
     public static void main(String[] args) {
         new Person("小明", 19).say();

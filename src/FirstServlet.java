@@ -17,7 +17,6 @@ public class FirstServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
-        writer.write("<h1>" + message + "</h1>");
         System.out.println("哈哈哈");
         String name = req.getParameter("name");
         String url = req.getParameter("url");
@@ -29,7 +28,7 @@ public class FirstServlet extends HttpServlet {
             System.out.println("===" + enumeration.nextElement());
         }
         System.out.println("name:" + name + "-----" + "url:" + url + "---city:" + city + "----sex:" + sex + "----web:" + web);
-
+        writer.write("<h1>" + name+url+ "</h1>");
         Cookie[] cookies = req.getCookies();
         HttpSession session = req.getSession();
         String ctx = req.getContextPath(); //返回指示请求上下文的请求 URI 部分。
@@ -43,8 +42,6 @@ public class FirstServlet extends HttpServlet {
 
         Cookie cookie = new Cookie("hello", "你好");
         resp.addCookie(cookie);
-
-
 //        destroy();
     }
 

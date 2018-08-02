@@ -10,7 +10,7 @@ public class MyFilter implements Filter {
     public void init(FilterConfig filterConfig) {
         // 获取初始化参数
         String canshu = filterConfig.getInitParameter("canshu");
-        System.out.println("初始化参数：" + canshu);
+        System.out.println("我是过滤器：我的初始化参数：" + canshu);
     }
 
     /**
@@ -23,8 +23,9 @@ public class MyFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) {
         // 输出站点名称
-        System.out.println("你访问我了，我是MyFilter");
+        System.out.println("你访问我了，我是过滤器MyFilter");
         String name=servletRequest.getParameter("name");
+        System.out.println("我是浏览器传来的name:"+name);
         try {
 //            if("hello".equals(name)){
                 // 把请求传回过滤链
