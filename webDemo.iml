@@ -20,6 +20,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="javax.servlet-api-3.1.0" level="project" />
-    <orderEntry type="library" name="aopalliance-1.0" level="project" />
+    <orderEntry type="library" name="spring-context-4.3.8.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-beans-4.3.8.RELEASE" level="project" />
+    <orderEntry type="library" name="spring-core-4.3.8.RELEASE" level="project" />
   </component>
 </module>
